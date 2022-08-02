@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.rubypaper'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '8'
+sourceCompatibility = '1.8'
 
 configurations {
 	compileOnly {
@@ -22,9 +22,11 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager
+	implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.6.9.Final'
+	implementation files('libs/board-spring-boot-statter-0.0.1-SNAPSHOT.jar')
 }
 
 tasks.named('test') {
