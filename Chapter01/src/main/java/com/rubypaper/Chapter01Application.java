@@ -28,7 +28,7 @@ public class Chapter01Application {
 		
 		
 		//배너 OFF
-		application.setBannerMode(Banner.Mode.OFF);
+		//application.setBannerMode(Banner.Mode.OFF);
 		
 		//사용자 배너 : src/main/resources/banner.txt
 		
