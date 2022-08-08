@@ -43,22 +43,23 @@ public class JPAClient {
 			
 			// 글 목록 조회
 			// 검색 대상이 테이블이 아니라 엔티티라는 점!
-			String jpql ="select b from Board b order by b.seq desc";
+			// 엔티티 이름과 엔티티 객체의 필드 명으로 작성
+			String jpql ="select b from Board2 b order by b.seq desc";
 			List<Board2> boardList= em.createQuery(jpql,Board2.class).getResultList();
 			
 			for(Board2 brd: boardList) {
 				System.out.println("---> "+ brd.toString());
 			}
 			tx.commit();
-		}catch (Exception e) {
-			e.printStackTrace();
-			
-			// Transaction rollback
-			tx.rollback();
-		}finally {
-			em.close();
-			emf.close();
-		}
+			}catch (Exception e) {
+				e.printStackTrace();
+				
+				// Transaction rollback
+				tx.rollback();
+			}finally {
+				em.close();
+				emf.close();
+			}
 		
 
 		
