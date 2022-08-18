@@ -9,8 +9,8 @@ import org.springframework.data.domain.Pageable;
 
 import com.querydsl.core.BooleanBuilder;
 import com.rubypaper.domain.Board;
-import com.rubypaper.domain.DynamicBoardRepository;
 import com.rubypaper.domain.QBoard;
+import com.rubypaper.persistence.DynamicBoardRepository;
 
 @SpringBootTest
 public class DynamicQueryTest {
